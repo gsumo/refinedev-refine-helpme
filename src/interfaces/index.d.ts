@@ -1,23 +1,29 @@
-import type { Column } from "@pankod/refine-react-table";
+import type { Column } from '@pankod/refine-react-table';
 
 export interface ICategory {
-    id: number;
-    title: string;
+  id: number;
+  title: string;
+}
+
+export interface ITag {
+  id: number;
+  title: string;
 }
 
 export interface IPost {
-    id: number;
-    title: string;
-    content: string;
-    status: "published" | "draft" | "rejected";
-    category: { id: number };
+  id: number;
+  title: string;
+  content: string;
+  status: 'published' | 'draft' | 'rejected';
+  category: { id: number };
+  tags: ITag[];
 }
 
 export interface ColumnButtonProps {
-    column: Column<any, any>; // eslint-disable-line
+  column: Column<any, any>; // eslint-disable-line
 }
 
 export interface FilterElementProps {
-    value: any; // eslint-disable-line
-    onChange: (value: any) => void; // eslint-disable-line
+  value: any; // eslint-disable-line
+  onChange: (value: any) => void; // eslint-disable-line
 }

@@ -30,7 +30,7 @@ const App: React.FC = () => {
                     Layout={Layout}
                     resources={[
                         {
-                            name: "posts",
+                            name: "inferences",
                             list: PostList,
                             edit: PostEdit,
                             create: PostCreate,
